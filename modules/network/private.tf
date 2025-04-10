@@ -1,7 +1,7 @@
 resource "aws_subnet" "eks_subnet_private_1a" {
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = cidrsubnet(var.cidr_block, 8, 3)
-  availability_zone = "us-east-a"
+  availability_zone = "us-east-1a"
 
   tags = merge(
     var.tags,
@@ -15,7 +15,7 @@ resource "aws_subnet" "eks_subnet_private_1a" {
 resource "aws_subnet" "eks_subnet_private_1b" {
   vpc_id            = aws_vpc.eks_vpc.id
   cidr_block        = cidrsubnet(var.cidr_block, 8, 4)
-  availability_zone = "us-east-b"
+  availability_zone = "us-east-1b"
 
   tags = merge(
     var.tags,
